@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Radial Binary Encoder</name>
+    <id>org.example.radialbinaryencoder</id>
+    <param name="number" type="int" min="0" max="1112" gui-text="Enter a number:">0</param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Custom"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">radial_binary_encoder.py</command>
+    </script>
+</inkscape-extension>

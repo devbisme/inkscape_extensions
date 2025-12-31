@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Split Image into Regions</name>
+    <id>org.example.split_regions</id>
+
+    <param name="bg_mode" type="optiongroup" gui-text="Background color source">
+        <option value="border">Image border</option>
+        <option value="manual">Manual hex (#RRGGBB)</option>
+        <option value="pick">Pick from image (transform center)</option>
+    </param>
+
+    <param name="bg_color" type="string" gui-text="Background color (#RRGGBB)">#000000</param>
+
+    <param name="tolerance" type="int" gui-text="Color tolerance" min="0" max="442">
+        <default>8.0</default>
+    </param>
+
+    <param name="min_pixels" type="int" gui-text="Minimum region size (0 = unlimited)" min="0" max="10000000000">
+        <default>0</default>
+    </param>
+
+    <effect>
+        <object-type>image</object-type>
+        <effects-menu>
+            <submenu name="Custom" />
+        </effects-menu>
+    </effect>
+
+    <script>
+        <command location="inx" interpreter="python">split_regions.py</command>
+    </script>
+</inkscape-extension>
